@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    <style>
+        .vertical-align {
+        display: flex;
+        align-items: center;
+        }
+    </style>
+{% endblock %}
+
+
+{% block title %}
+    {{this.title}}
+{% endblock title %}
+
+
+{% block content %}
+    <div>
+        <h1> {{this.title}}</h1>
+
+        <h3> {{this.body}}</h3>
+
+        <div class="text-center">
+            <a href="/books">
+                <button type="submit" class="btn btn-primary">
+                    పుస్తకాలు
+                </button>
+            </a>
+        </div>
+    </div>
+{% endblock %}
