@@ -17,16 +17,24 @@
 
 {% block content %}
     <div>
-        <h1> {{this.title}}</h1>
+        <div id="tf-home" class="text-center">
+            <div class="overlay">
+                <div class="content">
+                    <h1> {{this.title}}</h1>
+                    <h3> {{this.body}}</h3>
 
-        <h3> {{this.body}}</h3>
+                    <div class="text-center">
+                        <a href="/books">
+                            <button type="submit" class="btn btn-primary">
+                                పుస్తకాలు
+                            </button>
+                        </a>
+                    </div>
 
-        <div class="text-center">
-            <a href="/books">
-                <button type="submit" class="btn btn-primary">
-                    పుస్తకాలు
-                </button>
-            </a>
+                </div>
+            </div>
         </div>
+
+
     </div>
 {% endblock %}
