@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
-{% block title %}{{ this.title }} | My Blog{% endblock %}
-{% block body %}
-    <h1>{{ this.title }}
-        <p class="meta">
-            by {{ this.author }}
-            on {{ this.pub_date|dateformat('full') }}
-            <div class="body">{{ this.body }}</div>
+{% block title %}  Download {{ this.title }} free telugu ebook | Project Chalam {% endblock %}
+
+
+{% block content %}
+    <h4> Download {{ this.title }} free telugu ebook</h4>
+    <div class="body">{{ this.body }}</div>
+    {{this.downloads}}
 {% endblock %}

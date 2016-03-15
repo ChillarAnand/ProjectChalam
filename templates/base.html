@@ -62,20 +62,20 @@
             {% endblock %}
         </div>
 
-            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-            <script type="text/javascript" src="/js/bootstrap.js"></script>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="/js/bootstrap.js"></script>
 
 
-            <script>
+        <script>
 
-            $(document).ready(function() {
+        $(document).ready(function() {
             $('a[href="' + this.location.pathname + '"]').parent().addClass('active');
-            });
-            </script>
-            <!-- custom js block -->
-            {% block js %}
-            {% endblock %}
+        });
+        </script>
+        <!-- custom js block -->
+        {% block js %}
+        {% endblock %}
 
     </body>
 </html>
