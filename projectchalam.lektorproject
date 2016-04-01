@@ -1,2 +1,6 @@
 [project]
 name = projectchalam
+
+
+[servers.ghpages]
+target = ghpages+https://chillaranand/projectchalam
