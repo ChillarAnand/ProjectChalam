@@ -3,4 +3,4 @@ name = projectchalam
 
 
 [servers.ghpages]
-target = ghpages+https://chillaranand/projectchalam
+target = ghpages+https://chillaranand/projectchalam?cname=www.projectchalam.com
