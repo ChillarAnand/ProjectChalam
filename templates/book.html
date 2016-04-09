@@ -4,9 +4,15 @@
 
 
 {% block content %}
-    <h4>
-        {{ this.title }} by {{ this.author }}
-    </h4>
+    <h3>
+        {% if this.t_title %}
+            {{ this.t_title }} ({{ this.title }}) by {{ this.author }}
+        {% else %}
+            {{ this.title }} by {{ this.author }}
+        {% endif %}
+    </h3>
+
+    <hr />
 
     <div class="body">{{ this.body }}</div>
 
