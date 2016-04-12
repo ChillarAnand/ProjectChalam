@@ -2,37 +2,30 @@
 
 {% block css %}
     <style>
-        .vertical-align {
-        display: flex;
-        align-items: center;
-        }
+     .container {
+         height: 100%;
+     }
+     .fill {
+         min-height: 100%;
+         height: 100%;
+     }
     </style>
 {% endblock %}
 
 
 {% block title %}
-    {{this.title}}
+    ప్రాజెక్ట్ చలం - Free telugu digital library.
 {% endblock title %}
 
 
 {% block content %}
-    <div>
-        <div id="tf-home" class="text-center">
-            <div class="overlay">
-                <div class="content">
-                    <h1> {{this.title}}</h1>
-                    <h3> {{this.body}}</h3>
-
-                    <div class="text-center">
-                        <a href="/ebooks">
-                            <button type="submit" class="btn btn-primary">
-                                పుస్తకాలు
-                            </button>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
+    <div class="text-center fill">
+        <h1>ప్రాజెక్ట్ చలం</h1>
+        <h3>తెలుగు పుస్తకాలు ఉచితంగా, అందరికి అందుబాటులోకి తేవడమే ప్రాజెక్ట్ చలం యొక్క లక్ష్యం.</h3>
+        <a href="/ebooks">
+            <button type="submit" class="btn btn-primary">
+                పుస్తకాలు
+            </button>
+        </a>
     </div>
 {% endblock %}
