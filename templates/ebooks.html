@@ -9,7 +9,12 @@
     {% for post in this.pagination.items %}
         <h4>
             <a href="{{ post|url }}">
-                {{ post.t_title }} [{{ post.title }}] by {{ post.author }}
+                {% if post.t_title %}
+                    {{ post.t_title }} [{{ post.title }}] by {{ post.author }}
+                {% else %}
+                    {{ post.title }} by {{ post.author }}
+                {% endif %}
+
             </a>
         </h4>
         <br/>
