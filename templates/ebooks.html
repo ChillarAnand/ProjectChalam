@@ -6,15 +6,22 @@
 
 
 {% block content %}
+    Showing {{this.pagination.page*this.pagination.per_page - this.pagination.per_page + 1}}
+    to {{this.pagination.page*this.pagination.per_page}}
+    of {{this.pagination.total*this.pagination.per_page}}
+    <br />
+    <br />
     {% for post in this.pagination.items %}
         <h4>
             <a href="{{ post|url }}">
                 {% if post.t_title %}
-                    {{ post.t_title }} [{{ post.title }}] by {{ post.author }}
+                    {{ post.t_title }} [{{ post.title }}]
                 {% else %}
-                    {{ post.title }} by {{ post.author }}
+                    {{ post.title }}
                 {% endif %}
-
+                {% if post.author %}
+                    by {{ post.author }}
+                {% endif %}
             </a>
         </h4>
         <br/>
@@ -26,5 +33,23 @@
             {{ render_pagination(this.pagination) }}
         {% endif %}
     </div>
+
+    <script src="{{ '/static/js/jquery-1.12.3.min.js'}}"></script>
+
+    <script>
+    // go to page
+    $("#page_num").click(function() {
+        $(document).keypress(function(e) {
+            if(e.which == 13) {
+                var num = $('#page_num').val();
+                var url = window.location.origin + '/ebooks/page/' + num + '/';
+                /*                 console.log(url); */
+                window.location.replace(url);
+            }
+        });
+    });
+
+    </script>
+
 
 {% endblock %}
