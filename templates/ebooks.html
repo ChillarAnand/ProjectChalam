@@ -8,7 +8,7 @@
 {% block content %}
     Showing {{this.pagination.page*this.pagination.per_page - this.pagination.per_page + 1}}
     to {{this.pagination.page*this.pagination.per_page}}
-    of {{this.pagination.total*this.pagination.per_page}}
+    of {{this.pagination.total}}
     <br />
     <br />
     {% for post in this.pagination.items %}

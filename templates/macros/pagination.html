@@ -8,7 +8,7 @@
     {% endif %}
 
     |
-    <input value="{{ pagination.page }}" type="text" id="page_num" name="page" style="width:70px;" /> / {{pagination.total}}
+    <input value="{{ pagination.page }}" type="text" id="page_num" name="page" style="width:70px;" /> / {{pagination.total/pagination.per_page}}
 
     |
     {% if pagination.has_next %}
