@@ -1,6 +1,6 @@
 #container {
     width: 960px;
-    margin: 0 auto;
+    margin: 50 auto;
 }
 
 #contentcolumn {
@@ -19,11 +19,7 @@ img {
     margin-bottom: 12px;
 }
 
-.titlebox {
-    text-align: right;
-}
-
-#addthisbox {margin-bottom: 12px;}
+.footerbox {padding: 15px; text-align: center; margin-bottom: 15px;}
 
 td.label {
     /* Issue #290 */
@@ -35,7 +31,6 @@ td.label {
     vertical-align: super;
     font-size: xx-small;
 }
-
 
 .caption {
     /* Issue 292 */
@@ -49,6 +44,12 @@ div.figure > a > img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+div.sidebar, div.admonition, div.attention, div.caution, div.danger, div.error, div.hint, div.important, div.note, div.tip, div.warning {
+    /* Issue 277 */
+    border: 1px solid #aaa;
+    border-radius: 5px;
 }
 
 blockquote p, blockquote {
@@ -67,8 +68,8 @@ ul.bricks > li {
     margin: 3px;
 }
 
-.at300b, .stMainServices, .stButton, .stButton_gradient {
-    box-sizing: content-box;
+ul.breadcrumb > li:before {
+    content: " / ";
 }
 
 pre, pre code {
@@ -118,28 +119,25 @@ article.post-micro {
 }
 
 .metadata p:before,
-.postlist .listdate:after,
-.translationslist p:before {
+.postlist .listdate:before {
     content: " — ";
 }
 
-.metadata p:first-of-type:before,
-.translationslist p:first-of-type:before {
+.metadata p:first-of-type:before {
     content: "";
 }
 
-.metadata p,
-.translationslist p {
+.metadata p {
     display: inline;
 }
 
-.posttranslations h3, .translationslist h3 {
+.posttranslations h3 {
     display: inline;
     font-size: 1em;
     font-weight: bold;
 }
 
-.posttranslations h3:last-child, .translationslist h3:last-child {
+.posttranslations h3:last-child {
     display: none;
 }
 
@@ -147,45 +145,34 @@ article.post-micro {
     margin-top: 1em;
 }
 
-.navbar-brand {
-    padding: 0 15px;
+.navbar .brand {
+    padding: 0 20px;
 }
 
-.navbar-brand #blog-title {
-    padding: 15px 0;
+.navbar .brand #blog-title {
+    padding: 10px 0;
     display: inline-block;
 }
 
-.navbar-brand #logo {
-    max-width: 100%;
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
-.navbar-brand>img {
-    display: inline;
-}
-
-.row {
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
     margin: 0;
-}
-
-/* for alignment with Bootstrap's .entry-content styling */
-.entry-summary {
-    margin-top: 1em;
-}
-
-/* Custom page footer */
-#footer {
-    padding-top: 19px;
-    color: #777;
-    border-top: 1px solid #e5e5e5;
-}
-
-.codetable {
-    table-layout: fixed;
-}
-
-.codetable pre {
-    overflow-x: scroll;
+    overflow: visible;
+    clip: auto;
 }
 
 /* hat tip bootstrap/html5 boilerplate */

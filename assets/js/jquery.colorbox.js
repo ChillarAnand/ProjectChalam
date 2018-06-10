@@ -1,5 +1,5 @@
 /*!
-	Colorbox 1.6.4
+	Colorbox 1.6.1
 	license: MIT
 	http://www.jacklmoore.com/colorbox
 */
@@ -115,7 +115,7 @@
 				iframe.allowTransparency = "true";
 			}
 			iframe.name = (new Date()).getTime(); // give the iframe a unique name to prevent caching
-			iframe.allowFullscreen = true;
+			iframe.allowFullScreen = true;
 
 			return iframe;
 		}
@@ -413,8 +413,8 @@
 				var maxWidth = settings.get('maxWidth');
 				var maxHeight = settings.get('maxHeight');
 
-				settings.w = Math.max((maxWidth !== false ? Math.min(initialWidth, setSize(maxWidth, 'x')) : initialWidth) - loadedWidth - interfaceWidth, 0);
-				settings.h = Math.max((maxHeight !== false ? Math.min(initialHeight, setSize(maxHeight, 'y')) : initialHeight) - loadedHeight - interfaceHeight, 0);
+				settings.w = (maxWidth !== false ? Math.min(initialWidth, setSize(maxWidth, 'x')) : initialWidth) - loadedWidth - interfaceWidth;
+				settings.h = (maxHeight !== false ? Math.min(initialHeight, setSize(maxHeight, 'y')) : initialHeight) - loadedHeight - interfaceHeight;
 
 				$loaded.css({width:'', height:settings.h});
 				publicMethod.position();
@@ -484,7 +484,7 @@
 				$current = $tag(div, "Current"),
 				$prev = $('<button type="button"/>').attr({id:prefix+'Previous'}),
 				$next = $('<button type="button"/>').attr({id:prefix+'Next'}),
-				$slideshow = $('<button type="button"/>').attr({id:prefix+'Slideshow'}),
+				$slideshow = $tag('button', "Slideshow"),
 				$loadingOverlay
 			);
 
@@ -950,7 +950,7 @@
 		}, 100);
 
 		if (settings.get('inline')) {
-			var $target = $(href).eq(0);
+			var $target = $(href);
 			// Inserts an empty placeholder where inline content is being pulled from.
 			// An event is bound to put inline content back when Colorbox closes or loads new content.
 			$inline = $('<div>').hide().insertBefore($target);
