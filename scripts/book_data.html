@@ -1,0 +1,17 @@
+<table id="books" class="display" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>URL</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for index, row in df.iterrows() %}
+            <tr>
+                <td>{{ row.title }}</td>
+                <td><a href="{{ row.item_url }}">Download</a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

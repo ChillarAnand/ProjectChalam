@@ -1,0 +1,21 @@
+html {
+    display: table;
+    margin: auto;
+}
+
+
+body {
+    font-size: 21px;
+}
+
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+
+table {
+    /* border: 1px solid black; */
+    padding: 15px;
+}
