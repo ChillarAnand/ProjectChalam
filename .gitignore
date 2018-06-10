@@ -1,1 +1,6 @@
 *.*~
+.doit.db
+*cache
+*.csv
+*.txt
+output/*
