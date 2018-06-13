@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://projectchalam/</loc>
-  <lastmod>2018-06-10T14:04:00Z</lastmod>
+  <lastmod>2018-06-12T14:10:00Z</lastmod>
  </url>
  <url>
   <loc>http://projectchalam/about/</loc>
@@ -15,7 +15,11 @@
  </url>
  <url>
   <loc>http://projectchalam/archive.html</loc>
-  <lastmod>2018-06-10T14:03:00Z</lastmod>
+  <lastmod>2018-06-13T14:28:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://projectchalam/authors/gudipaati-venkata-chalam/</loc>
+  <lastmod>2018-06-12T14:10:00Z</lastmod>
  </url>
  <url>
   <loc>http://projectchalam/blog/</loc>
